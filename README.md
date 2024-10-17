@@ -1,6 +1,4 @@
-# [Link to the app](https://tracking-map.vercel.app/)
-
-## Tracking Map
+# Tracking Map - [Link to the app](https://tracking-map.vercel.app/)
 
 ## Unique access key
 

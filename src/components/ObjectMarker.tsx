@@ -17,7 +17,11 @@ export const ObjectMarker: React.FC<ObjectMarkerProps> = ({ object }) => {
     <Marker position={object.coordinates} icon={icon}>
       <Popup>
         <div>
+          <strong>Id:</strong> {object.id}
+          <br />
           <strong>Coordinates:</strong> {object.coordinates}
+          <br />
+          <strong>Direction:</strong> {object.direction}
         </div>
       </Popup>
     </Marker>

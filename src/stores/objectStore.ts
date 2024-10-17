@@ -3,7 +3,7 @@ import { makeAutoObservable } from "mobx";
 export interface ObjectType {
   id: string;
   coordinates: [number, number];
-  lastUpdate: number;
+  direction: string | null;
   isLost: boolean;
 }
 
@@ -18,11 +18,15 @@ class ObjectStore {
     this.objects.push(object);
   }
 
-  updateObject(id: string, newCoordinates: [number, number]) {
+  updateObject(
+    id: string,
+    newCoordinates: [number, number],
+    newDirection: string
+  ) {
     const obj = this.objects.find((o) => o.id === id);
     if (obj) {
       obj.coordinates = newCoordinates;
-      obj.lastUpdate = Date.now();
+      obj.direction = newDirection;
     }
   }
 
