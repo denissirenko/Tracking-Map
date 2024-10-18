@@ -13,7 +13,7 @@ export const runMockServer = () => {
 
     const direction = previousCoordinates
       ? calculateDirection(previousCoordinates, newCoordinates)
-      : "";
+      : "Start position";
 
     const newObject: ObjectType = {
       id: Math.random().toString(36).substring(7),
